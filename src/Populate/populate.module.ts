@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Parent, ParentSchema } from './parent.model';
-import { ParentService } from './parent.service';
+import { PopulateService } from './populate.service';
 import { Child, ChildSchema } from './child.model';
 
 @Module({
@@ -11,6 +11,6 @@ import { Child, ChildSchema } from './child.model';
       { schema: ChildSchema, name: Child.name },
     ]),
   ],
-  providers: [ParentService],
+  providers: [PopulateService],
 })
-export class ParentModule {}
+export class PopulateModule {}
